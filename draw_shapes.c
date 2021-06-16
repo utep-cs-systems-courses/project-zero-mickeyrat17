@@ -29,8 +29,7 @@ void print_triangle(int leftCol, int size)
 void print_arrow(int leftCol, int arrowheadSize)
 {
   print_triangle(leftCol, arrowheadSize);
-  int squareSize = arrowheadSize;
-  if(arrowheadSize % 2 == 0) squareSize+=1;
-  int squareLeftCol = leftCol + (squareSize/2);
+  int squareSize = 2*(arrowheadSize)-5;
+  int squareLeftCol = leftCol + 3;
   print_square(squareLeftCol, squareSize);
 }
