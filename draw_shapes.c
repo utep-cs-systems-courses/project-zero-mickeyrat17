@@ -26,10 +26,16 @@ void print_triangle(int leftCol, int size)
   }
 }
 
+// Prints an arrow of a specified arrowhead size
+// will be shifted over by leftCol number of spaces
+// Shaft of arrow is determined by size of arrowhead
 void print_arrow(int leftCol, int arrowheadSize)
 {
   print_triangle(leftCol, arrowheadSize);
+  // square size is 6 less than the length of the longest row of the arrowhead
   int squareSize = 2*(arrowheadSize)-5;
+  // since square size is 6 less, in order to center it, it needs to be shifted over
+  // by half of that (3).
   int squareLeftCol = leftCol + 3;
   print_square(squareLeftCol, squareSize);
 }
